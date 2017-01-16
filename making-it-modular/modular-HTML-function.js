@@ -1,17 +1,6 @@
 var https = require('https');
 
-function getAndPrintHTML() {
-
-  var requestOptions = {
-    host: process.argv[2],
-    path: process.argv[3]
-  }
-
-  // Input those arguments in the terminal, using the process.argv method
-  // var requestOptions = {
-  // host: 'sytantris.github.io',
-  // path: '/http-examples/step3.html'
-  // };
+function getAndPrintHTML(options) {
 
   var final = '';
 
@@ -32,4 +21,9 @@ function getAndPrintHTML() {
   return final;
 };
 
-getAndPrintHTML();
+var requestOptions = {
+host: 'sytantris.github.io',
+path: '/http-examples/step3.html'
+};
+
+getAndPrintHTML(requestOptions);
